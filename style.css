@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.grid__container {
+    height: 100vh;
+    width: 80vw;
+    margin: auto;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 20% repeat(3, 1fr);
+    grid-template-rows: 90px, repeat(5, 1fr) 50px;
+    grid-template-areas: 
+        "header header header header"
+        "side main main main"
+        "side main main main"
+        "side main main main"
+        "side main main main"
+        "side main main main"
+        "footer footer footer footer";
+}
+
+section {
+    border-bottom: 1px solid rgb(187, 145, 145);
+    box-shadow: 1px -2px teal;
+    padding: 4px;
+}
+
+.header {
+    grid-area: header;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 25px;
+    align-items: flex-start;    
+}
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navlist {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+.items {
+    margin: 15px;
+}
+
+.items a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: #333333;
+}
+
+.main {
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+.slider {
+    position: relative:
+    display:block;
+    height:300px;
+    width:95%;
+    margin: 30px auto;
+    border: 1px solid black; 
+}
+
+.sidebar {
+    grid-area: side;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    grid-area: footer;
+    background: rgb(44, 30, 30);
+    display:flex;
+    color: aquamarine;
+    justify-content: center;
+    align-items: center;
+}
